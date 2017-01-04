@@ -9,12 +9,19 @@ html body * {
 html, body {
     overflow: hidden;
     background: #0C0109;
+    font: 14px 'Roboto Condensed', sans-serif;
 }
 
 .logo {
-    background: url("../img/bfs.png") no-repeat center center;
+    background: url("../img/bfs.png") no-repeat center left;
     background-size: contain;
-    width: 317px;
-    height: 361px;
+
+    height: 160px;
     margin: 20px;
+}
+.logo h1 {
+    margin: 50px 10px 0px 180px;
+    font-size: 26px;
+    font-weight: inherit;
+
 }
