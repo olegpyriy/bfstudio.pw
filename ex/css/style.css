@@ -8,26 +8,13 @@ html body * {
 }
 html, body {
     overflow: hidden;
-}
-.window {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: url("../img/bg/bg1.jpg") no-repeat center center /cover;
+    background: #0C0109;
 }
 
-.barPanel {
-    width: 50px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(21, 21, 21, 0.81);
-}
 .logo {
-    background: url("../img/eva_logo.png") no-repeat center center /60%;
-    width: 100%;
-    height: 30px;
+    background: url("../img/bfs.png") no-repeat center center;
+    background-size: contain;
+    width: 317px;
+    height: 361px;
+    margin: 20px;
 }
