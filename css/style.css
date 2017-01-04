@@ -15,7 +15,7 @@ html, body {
 .logo {
     background: url("../img/bfs.png") no-repeat center left;
     background-size: contain;
-
+    overflow: hidden;
     height: 160px;
     margin: 20px;
 }
