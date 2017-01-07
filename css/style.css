@@ -13,15 +13,14 @@ html, body {
     min-width: 1050px;
 }
 .bg {
-    position: fixed;
     z-index: 0;
-    top: 0;
+    position: fixed;
+    top: -200px;
+    left: -200px;
     bottom: 0;
-    left: 0;
     right: 0;
     background: #05050c url("../img/bg2.png") no-repeat center center;
     background-size: cover;
-    background-attachment: fixed;
 }
 header {
     background-color: rgb(7, 7, 7);
@@ -41,6 +40,8 @@ header {
     display: inline-block;
     background-color: rgb(7, 7, 7);
     margin-left: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none
 }
 .logo h1 {
     margin: 15px 10px 15px 120px;
@@ -73,6 +74,13 @@ header {
     font-weight: lighter;
     color: #ffffff;
     cursor: pointer;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+}
+.menu ul li:hover, .menu ul li:focus{
+    color: #f20155;
 }
 
 .container {
@@ -95,6 +103,36 @@ header {
     left: 50%;
     margin: -180px 0 0 -362px;
     margin-left: -362px;
+    z-index: 1000;
+}
+.terminal, .terminal input {
+    font-family: 'Ubuntu Mono', monospace;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing:1px;
+    color: #D8E7BB;
+}
+.terminal input {
+    width: 460px;
+    line-height: 15px;
+    border: none;
+    background: none;
+    padding-left: 6px;
+}
+.terminal pre {
+    width: 100%;
+}
+.terminal p {
+    /*margin: 2px;*/
+}
+.header {
+    height: 28px;
+    cursor: move;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 1px 5px 0 75px;
+    -webkit-user-select: none;
+    -moz-user-select: none
 }
 
 footer {
@@ -107,7 +145,7 @@ footer {
     background-color: rgb(7, 7, 7);
     padding: 5px 30px;
     font-weight: lighter;
-
+    font-family: 'Ubuntu', sans-serif;
 }
 footer h3 {
     color: #ffffff;
