@@ -12,6 +12,9 @@ html, body {
     height: 100%;
     min-width: 1050px;
 }
+a {
+    color: #ffffff;
+}
 .bg {
     z-index: 0;
     position: fixed;
@@ -67,19 +70,21 @@ header {
     list-style: none;
 }
 .menu ul li{
-    padding: 5px 17px;
     float: left;
+    cursor: pointer;
+}
+.menu ul li a{
+    padding: 5px 17px;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: lighter;
     color: #ffffff;
-    cursor: pointer;
     -webkit-transition: all 0.2s ease 0s;
     -moz-transition: all 0.2s ease 0s;
     -o-transition: all 0.2s ease 0s;
     transition: all 0.2s ease 0s;
 }
-.menu ul li:hover, .menu ul li:focus{
+.menu ul li a:hover, .menu ul li a:focus{
     color: #f20155;
 }
 
@@ -93,7 +98,7 @@ header {
     max-height: 100%;
     min-width: 1050px;
 }
-.terminal {
+.terminal_container {
     background: url("../img/terminal.png") no-repeat center center;
     background-size: contain;
     height: 463px;
@@ -102,38 +107,62 @@ header {
     top: 50%;
     left: 50%;
     margin: -180px 0 0 -362px;
-    margin-left: -362px;
     z-index: 1000;
+    cursor: text;
+    overflow: hidden;
 }
-.terminal, .terminal input {
+.terminal_container .header {
+    height: 28px;
+    position: absolute;
+    overflow: hidden;
+    cursor: move;
+    top: 0;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 5px 5px 0 75px;
+    -webkit-user-select: none;
+    -moz-user-select: none
+}
+.terminal {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 435px;
+    bottom: 0;
+}
+.terminal_container, .terminal input {
     font-family: 'Ubuntu Mono', monospace;
-    padding: 5px;
     font-size: 15px;
     line-height: 17px;
     letter-spacing:1px;
     color: #D8E7BB;
 }
 .terminal input {
-    width: 460px;
+    width: 455px;
     line-height: 15px;
     border: none;
     background: none;
-    padding-left: 6px;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+.terminal input:hover, .terminal input:focus {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
 }
 .terminal pre {
     width: 100%;
+    padding: 0 5px;
 }
 .terminal p {
     /*margin: 2px;*/
+    margin: 0;
+    padding: 0 5px;
 }
-.header {
-    height: 28px;
-    cursor: move;
-    font-family: 'Ubuntu', sans-serif;
-    padding: 1px 5px 0 75px;
-    -webkit-user-select: none;
-    -moz-user-select: none
-}
+
 
 footer {
     position: absolute;
@@ -146,18 +175,240 @@ footer {
     padding: 5px 30px;
     font-weight: lighter;
     font-family: 'Ubuntu', sans-serif;
+    z-index: 10;
 }
 footer h3 {
     color: #ffffff;
     font-weight: lighter;
     float: left;
+    font-size: 13px;
 }
 footer a{
-    margin-top: 2px;
+    margin-top: 0;
     text-decoration: underline;
     float: right;
     color: #0077B5;
-    padding: 0 0 0 30px;
+    line-height: 15px;
+    padding: 1px 0 1px 30px;
     background: url("../img/lin_logo.png") no-repeat 5px center;
     background-size: contain;
+}
+.about_tpl_ {
+    margin: 15px 5px;
+
+    line-height: 3.5ch;
+}
+.about_tpl_ p {
+    text-indent: 25px;
+}
+
+#p_container {
+    height: 190px;
+    width: 290px;
+    position: absolute;
+    bottom: 27px;
+    right: 0;
+    overflow: hidden;
+    z-index: 10000;
+}
+#p {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: -400px;
+    background: url("../img/lp.png") no-repeat bottom right;
+    background-size: 150px;
+}
+#p .dialog_box {
+    width: 190px;
+    height: 140px;
+    padding: 10px 40px 10px 10px;
+    background: url("../img/dialog.png") no-repeat center center;
+    background-size: 100% 100%;
+    position: relative;
+    top: 0;
+    left: 10px;
+    display: none;
+    font-size: 15px;
+    color: #333333;
+    overflow: hidden;
+}
+.dialog {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.answer_box {
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+    text-align: right;
+    overflow: hidden;
+}
+.answer {
+    text-transform: uppercase;
+    color: #ff0159;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0px;
+    width: 48%;
+    vertical-align: middle;
+    text-align: center;
+}
+.answer:hover {
+    text-decoration: underline;
+}
+
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.jspContainer
+{
+    overflow: hidden;
+    position: relative;
+}
+
+.jspPane
+{
+    position: absolute;
+}
+
+.jspVerticalBar
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+}
+
+.jspHorizontalBar
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background: red;
+}
+
+.jspCap
+{
+    display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+    float: left;
+}
+
+.jspTrack
+{
+    position: relative;
+}
+
+.jspDrag
+{
+    background: #D16A4F;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+
+}
+.jspVerticalBar:hover .jspDrag
+{
+    background: #eb4a24;
+}
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+    float: left;
+    height: 100%;
+}
+
+.jspArrow
+{
+    background: #50506d;
+    text-indent: -20000px;
+    display: block;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.jspArrow.jspDisabled
+{
+    cursor: default;
+    background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+    height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+    width: 16px;
+    float: left;
+    height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+    outline: none;
+}
+
+.jspCorner
+{
+    background: #eeeef4;
+    float: left;
+    height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+    margin: 0 -3px 0 0;
+}
+
+.skills {
+    line-height: 3.5ch;
+}
+.skills ul {
+    margin: 0 0 0 30px;
+}
+.skills ul li {
+    margin: 10px 0;
+}
+.skills ul li li {
+    margin: 5px 0;
+}
+.skills ul li li li {
+    margin: 0;
+}
+.skills ul li span {
+    font-size: 20px;
+}
+.skills ul li ul li span {
+    font-size: 18px;
+}
+.skills ul li ul li ul li span {
+    font-size: 16px;
+}
+.skills ul li ul li ul li ul li span {
+    font-size: 14px;
 }
