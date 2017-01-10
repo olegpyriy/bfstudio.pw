@@ -119,6 +119,7 @@ $(document).ready(function () {
                 }
             }
         });
+
     }
     var u  = new Url;
 
@@ -151,18 +152,22 @@ $(document).ready(function () {
         li++;
     });
 
-    $(".terminal").click(function () {
-        $(this).find('input').focus();
-    });
 
-    $(".terminal").keyup(function(event){
+
+
+    $(".terminal").keyup(function(e){
         if(event.keyCode == 13){
             enter_terminal (this, true);
         }
     });
 
 
+    $(".jspPane").click(function (e) {
+        if (e.target.tagName == 'P')
+            return;
 
+        $(this).find('input').focus();
+    });
 
 
     function cursorPos (e) {
