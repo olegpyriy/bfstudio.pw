@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="/bf.mf">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Black Fox Studio</title>
@@ -11,18 +11,6 @@
     <meta property="og:image" content="/img/bg2.png" />
     <meta property="og:description" content="Web Studio of full stack development." />
     <style>.loader{position:absolute;top:0;bottom:0;left:0;right:0;z-index:99999999;background: rgb(7, 7, 7);}.cssload-thecube{top:50%;left:50%;margin-left:-31px;width:62px;height:62px;margin-top:41px;position:absolute;transform:rotateZ(45deg);-o-transform:rotateZ(45deg);-ms-transform:rotateZ(45deg);-webkit-transform:rotateZ(45deg);-moz-transform:rotateZ(45deg)}.cssload-thecube .cssload-cube{position:relative;transform:rotateZ(45deg);-o-transform:rotateZ(45deg);-ms-transform:rotateZ(45deg);-webkit-transform:rotateZ(45deg);-moz-transform:rotateZ(45deg);float:left;width:50%;height:50%;position:relative;transform:scale(1.1);-o-transform:scale(1.1);-ms-transform:scale(1.1);-webkit-transform:scale(1.1);-moz-transform:scale(1.1)}.cssload-thecube .cssload-cube:before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color: #ff0159;animation:cssload-fold-thecube 3.84s infinite linear both;-o-animation:cssload-fold-thecube 3.84s infinite linear both;-ms-animation:cssload-fold-thecube 3.84s infinite linear both;-webkit-animation:cssload-fold-thecube 3.84s infinite linear both;-moz-animation:cssload-fold-thecube 3.84s infinite linear both;transform-origin:100% 100%;-o-transform-origin:100% 100%;-ms-transform-origin:100% 100%;-webkit-transform-origin:100% 100%;-moz-transform-origin:100% 100%}.cssload-thecube .cssload-c2{transform:scale(1.1) rotateZ(90deg);-o-transform:scale(1.1) rotateZ(90deg);-ms-transform:scale(1.1) rotateZ(90deg);-webkit-transform:scale(1.1) rotateZ(90deg);-moz-transform:scale(1.1) rotateZ(90deg)}.cssload-thecube .cssload-c3{transform:scale(1.1) rotateZ(180deg);-o-transform:scale(1.1) rotateZ(180deg);-ms-transform:scale(1.1) rotateZ(180deg);-webkit-transform:scale(1.1) rotateZ(180deg);-moz-transform:scale(1.1) rotateZ(180deg)}.cssload-thecube .cssload-c4{transform:scale(1.1) rotateZ(270deg);-o-transform:scale(1.1) rotateZ(270deg);-ms-transform:scale(1.1) rotateZ(270deg);-webkit-transform:scale(1.1) rotateZ(270deg);-moz-transform:scale(1.1) rotateZ(270deg)}.cssload-thecube .cssload-c2:before{animation-delay:.48s;-o-animation-delay:.48s;-ms-animation-delay:.48s;-webkit-animation-delay:.48s;-moz-animation-delay:.48s}.cssload-thecube .cssload-c3:before{animation-delay:.96s;-o-animation-delay:.96s;-ms-animation-delay:.96s;-webkit-animation-delay:.96s;-moz-animation-delay:.96s}.cssload-thecube .cssload-c4:before{animation-delay:1.44s;-o-animation-delay:1.44s;-ms-animation-delay:1.44s;-webkit-animation-delay:1.44s;-moz-animation-delay:1.44s}@keyframes cssload-fold-thecube{0%,10%{transform:perspective(115px) rotateX(-180deg);opacity:0}25%,75%{transform:perspective(115px) rotateX(0deg);opacity:1}90%,100%{transform:perspective(115px) rotateY(180deg);opacity:0}}@-o-keyframes cssload-fold-thecube{0%,10%{-o-transform:perspective(115px) rotateX(-180deg);opacity:0}25%,75%{-o-transform:perspective(115px) rotateX(0deg);opacity:1}90%,100%{-o-transform:perspective(115px) rotateY(180deg);opacity:0}}@-ms-keyframes cssload-fold-thecube{0%,10%{-ms-transform:perspective(115px) rotateX(-180deg);opacity:0}25%,75%{-ms-transform:perspective(115px) rotateX(0deg);opacity:1}90%,100%{-ms-transform:perspective(115px) rotateY(180deg);opacity:0}}@-webkit-keyframes cssload-fold-thecube{0%,10%{-webkit-transform:perspective(115px) rotateX(-180deg);opacity:0}25%,75%{-webkit-transform:perspective(115px) rotateX(0deg);opacity:1}90%,100%{-webkit-transform:perspective(115px) rotateY(180deg);opacity:0}}@-moz-keyframes cssload-fold-thecube{0%,10%{-moz-transform:perspective(115px) rotateX(-180deg);opacity:0}25%,75%{-moz-transform:perspective(115px) rotateX(0deg);opacity:1}90%,100%{-moz-transform:perspective(115px) rotateY(180deg);opacity:0}}</style>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script>
-        $(window).bind("load", function () {
-            $('.terminal_container').fadeOut(0);
-            $('.loader').fadeOut(200);
-            setTimeout(function () {
-                $('.terminal_container').fadeIn(200);
-            }, 300);
-        });
-    </script>
 </head>
 <body>
     <div class="loader">
@@ -299,7 +287,38 @@
         <!--<h2>We are busy. Busy working.</h2>-->
     <!--</div>-->
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function () {
+            $('.terminal_container').fadeOut(0);
+            $('.loader').fadeOut(200);
+            setTimeout(function () {
+                $('.terminal_container').fadeIn(200);
+            }, 300);
+        });
+    </script>
+
+    <noscript id="deferred-styles">
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </noscript>
+    <script>
+        var loadDeferredStyles = function() {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+        else window.addEventListener('load', loadDeferredStyles);
+    </script>
+
+
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono" rel="stylesheet" property="text/css">
+
     <script src="/js/jquery.mousewheel.js"></script>
     <script src="/js/jquery.jscrollpane.min.js"></script>
     <script src="/js/url.js"></script>

@@ -156,7 +156,7 @@ $(document).ready(function () {
 
 
     $(".terminal").keyup(function(e){
-        if(event.keyCode == 13){
+        if(e.keyCode == 13){
             enter_terminal (this, true);
         }
     });

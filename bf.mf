@@ -1,0 +1,19 @@
+CACHE MANIFEST
+/index.html
+http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
+https://fonts.googleapis.com/css
+/js/jquery.mousewheel.js
+/js/jquery.jscrollpane.min.js
+/js/url.js
+/js/doc.js
+/css/style.css
+/img/bg2.png
+/img/bfs.png
+/img/terminal.png
+/img/lin_logo.png
+/img/lp.png
+https://fonts.gstatic.com/s/ubuntumono/v6/ViZhet7Ak-LRXZMXzuAfkY4P5ICox8Kq3LLUNMylGO4.woff2
+https://fonts.gstatic.com/s/ubuntu/v9/sDGTilo5QRsfWu6Yc11AXg.woff2
+https://fonts.gstatic.com/s/robotocondensed/v13/Zd2E9abXLFGSr9G3YK2MsDAdhzWOYhqHvOZMRGaEyPo.woff2
+https://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nBBQ_Gf4FfI8J4SYljBAylk.woff2
+/img/dialog.png
